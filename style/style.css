@@ -1,7 +1,8 @@
 /* reset code and common starts here  */
 :root{
+    --transition: all 0.3s ;
+    --transform: scale(1.1);
 }
-
 *{
     box-sizing: border-box;
     margin: 0;
@@ -20,8 +21,8 @@ html{
 }
 body{
     background-color: #fff;
-    width: 100rem;
-    max-width: 100%;
+    /* width: 100rem; */
+    max-width: 90%;
     margin: auto;
     box-shadow: 0.1rem 0.1rem 0.1rem #c4c4c4, -0.1rem 0rem 0.1rem #c4c4c4 ;
 }
@@ -29,7 +30,31 @@ body{
     text-align: justify;
 }
 .text-white{
-    color: white;
+    color: #F4F6FF;
+}
+.btn{
+    background-color: rgb(230, 159, 8);
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding:1rem 0;
+    box-shadow: 0.1rem 0.1rem 0.1rem #222;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.section-heading{
+    font-size: 6rem;
+    text-align: center;
+    font-family: "Italianno", cursive;
+}
+.section-center{
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+    justify-content: space-evenly;
+    align-items: center;
 }
 /* reset code and common ends here  */
 /* header style starts here  */
@@ -58,7 +83,7 @@ nav ul{
 }
 nav ul li{
     padding: 1rem;
-    transition: all 0.4s;
+    transition: var(--transition);
 }
 nav ul li:hover{
     background-color: brown;
@@ -74,9 +99,11 @@ nav ul li:hover{
 .banner{
     padding: 5rem 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    min-height: 95vh;
+    min-height: 90vh;
+    /* background-image: url(../images/cover-photo.jpg);
+    opacity: 0.85; */
 }
 .banner article{
     flex-basis: 50%;
@@ -84,14 +111,17 @@ nav ul li:hover{
 }
 .banner-heading{
     display: inline-block;
-    background-color: black;
+    background-color: #091057;
     color: #fff;
     padding: 1rem;
     margin-bottom: 1.5rem;
-    font-size: 4rem;
+    font-size: 3rem;
+    margin-left: 2rem;
+    font-family: "Playwrite GB S", cursive;
 }
 .banner-decription{
     font-size: 1.8rem;
+    margin-left: 2rem;
 
 }
 .banner aside{
@@ -102,8 +132,74 @@ nav ul li:hover{
     width: 55rem;
     height: 55rem;
     border: 0.3rem solid black;
+    border-radius: 0.6rem;
 }
 /* banner section ends here */
+/* about me section starts here   */
+#blog-about{
+    background-color: #091057;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.card{
+    flex: 1;
+    border-radius: 0.6rem;
+    background-color: #E2F1E7;
+    padding: 3rem 1rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    transition: var(--transition);
+}
+.card:hover{
+    transform: var(--transform);
+}
+.card-heading{
+    font-size: 3rem;
+}
+.card-description{
+    padding: 0.4rem 0;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.card-btn{
+    width: 80%;
+        
+}
+/* about me section ends here   */
+/* Archives Section starts here */
+.archives-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+    border-top: 0.1rem solid;
+    border-bottom: 0.1rem solid;
+}
+.archives-lists{
+    display: flex;
+    text-align: center;
+    gap: 0.6rem;
+}
+.archives-list{
+
+}
+.archives-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.6rem;
+    transition: var(--transition);
+}
+.archives-img:hover{
+    transform: var(--transform);
+}
+/* Archives Section ends here */
 /* responsiveness starts here  */
 @media screen and (max-width: 992px){
     .banner{
@@ -124,6 +220,14 @@ nav ul li:hover{
     .banner article{
         width: 80%;
     }
+    .cards{
+        flex-direction: column;
+        width: 80%;
+    }
+    #archives{
+        min-height: auto;
+
+    }
 }
 @media screen and (max-width: 600px){
     html{
@@ -140,11 +244,26 @@ nav ul li:hover{
     .banner{
         min-height: auto;
     }
+    .banner-heading{
+        text-align: center;
+    }
     .banner article{
         width: 90%;
     }
-    .bnner-img{
+    .banner-img{
         max-width: 100%;
+    }
+    #blog-about{
+        min-height: auto;
+    }
+    .cards{
+        width: 90%;
+    }
+    .archives-lists{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 90%;
+        gap: 3rem;
     }
 }
 /* responsiveness ends here  */
