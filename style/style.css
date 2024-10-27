@@ -2,6 +2,7 @@
 :root{
     --transition: all 0.3s ;
     --transform: scale(1.1);
+    --box-shadow: 0.1rem 0.1rem 0.1rem #c4c4c4, -0.1rem 0rem 0.1rem #c4c4c4;
 }
 *{
     box-sizing: border-box;
@@ -24,7 +25,7 @@ body{
     /* width: 100rem; */
     max-width: 90%;
     margin: auto;
-    box-shadow: 0.1rem 0.1rem 0.1rem #c4c4c4, -0.1rem 0rem 0.1rem #c4c4c4 ;
+    box-shadow: var(--box-shadow);
 }
 .text-justify{
     text-align: justify;
@@ -218,7 +219,7 @@ nav ul li:hover{
     width: 70%;
     display: flex;
     margin: 1rem 0;
-    box-shadow: 0.1rem 0.1rem 0.1rem #c4c4c4, -0.1rem 0rem 0.1rem #c4c4c4;
+    box-shadow: var(--box-shadow);
     transition: var(--transition);
     border-radius: 1rem;
 }
@@ -256,6 +257,74 @@ nav ul li:hover{
     width: 30%;
 }
 /* blog post section ends here */
+/* contact section starts here */
+#contacts{
+    background-color: #4c4c4c;
+    min-height: 75vh;
+}
+form{
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    color: #fff;
+    margin: 1rem;
+}
+.form-control{
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control label{
+    font-size: 2rem;
+    flex: 0.3;
+}
+
+.form-control input, textarea{
+    flex: 0.7;
+    width: 40rem;
+    padding: 2rem;
+    border: none;
+    border-radius: 0.6rem;
+}
+textarea{
+    resize: none;
+    height: 12vh;
+}
+.form-btn-field{
+    display: flex;
+    justify-content: flex-end;
+}
+.contact-btn{
+    width: 30%;
+}
+
+/* contact section ends here */
+/* footer section starts here*/
+.footer{
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 5vh;
+    padding: 3rem 4rem;
+}
+.copyright-text{
+    font-size: 1.2rem;
+}
+.footer-link{
+    color: white;
+}
+.footer-nav{
+    display: flex;
+    gap: 1.5rem;
+}
+.footer-icon{
+    font-size: 1.25rem;
+}
+
+/* footer section ends here*/
 /* responsiveness starts here  */
 @media screen and (max-width: 992px){
     .banner{
@@ -288,6 +357,9 @@ nav ul li:hover{
         width: 80%;
         flex-direction: column;
     }
+    #contacts{
+        height: auto;
+
 }
 @media screen and (max-width: 600px){
     html{
@@ -328,5 +400,14 @@ nav ul li:hover{
     .blog-post{
         width: 90%;
     }
+    form{
+        width: 90%;
+    }
+    .form-control{
+        flex-direction: column;
+    }
+    .form-control input, textarea{
+        width: 35rem;
+        margin-bottom: 0.5rem;
 }
 /* responsiveness ends here  */
