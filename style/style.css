@@ -115,6 +115,7 @@ nav ul li:hover{
     background-image: url(../images/cover-photo.jpg);
     background-color: #cccccc;
     background-repeat: no-repeat;
+    background-size: auto;
 }
 .banner article{
     flex-basis: 50%;
