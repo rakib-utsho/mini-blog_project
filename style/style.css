@@ -84,7 +84,7 @@ header{
 .logo{
     font-size: 4rem;
 }
-#menu-icon2{
+#menu-icon{
     display: none;
 }
 nav ul{
@@ -112,12 +112,13 @@ nav ul li:hover{
     justify-content: space-between;
     align-items: center;
     min-height: 90vh;
-    /* background-image: url(../images/cover-photo.jpg);
-    opacity: 0.85; */
+    background-image: url(../images/cover-photo.jpg);
+    background-color: #cccccc;
 }
 .banner article{
     flex-basis: 50%;
     margin: 1rem;
+    
 }
 .banner-heading{
     display: inline-block;
@@ -132,6 +133,8 @@ nav ul li:hover{
 .banner-decription{
     font-size: 1.8rem;
     margin-left: 2rem;
+    background-color: #1b16161c;
+    padding: 1.5rem 1rem;
 
 }
 .banner aside{
@@ -197,9 +200,7 @@ nav ul li:hover{
     text-align: center;
     gap: 0.6rem;
 }
-.archives-list{
 
-}
 .archives-img{
     width: 100%;
     height: 100%;
@@ -372,14 +373,14 @@ textarea{
     header{
         flex-direction: column;
     }
-    #menu-icon2{
+    #menu-icon{
         display: block;
         margin: 2rem 0;
     }
     .hidden{
         display: none;
     }
-    
+
     nav ul{
         flex-direction: column;
         padding-left: 2.5rem;
