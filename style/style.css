@@ -84,6 +84,9 @@ header{
 .logo{
     font-size: 4rem;
 }
+#menu-icon2{
+    display: none;
+}
 nav ul{
     display: flex;
     gap: 2rem;
@@ -359,6 +362,7 @@ textarea{
     }
     #contacts{
         height: auto;
+    }
 
 }
 @media screen and (max-width: 600px){
@@ -368,7 +372,14 @@ textarea{
     header{
         flex-direction: column;
     }
-
+    #menu-icon2{
+        display: block;
+        margin: 2rem 0;
+    }
+    .hidden{
+        display: none;
+    }
+    
     nav ul{
         flex-direction: column;
         padding-left: 2.5rem;
@@ -409,5 +420,6 @@ textarea{
     .form-control input, textarea{
         width: 35rem;
         margin-bottom: 0.5rem;
+    }
 }
 /* responsiveness ends here  */
