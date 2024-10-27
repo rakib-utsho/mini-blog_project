@@ -56,6 +56,12 @@ body{
     justify-content: space-evenly;
     align-items: center;
 }
+
+img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 /* reset code and common ends here  */
 /* header style starts here  */
 header{
@@ -200,6 +206,9 @@ nav ul li:hover{
     transform: var(--transform);
 }
 /* Archives Section ends here */
+/* blog post section start here */
+
+/* blog post section ends here */
 /* responsiveness starts here  */
 @media screen and (max-width: 992px){
     .banner{
